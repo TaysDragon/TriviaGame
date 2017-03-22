@@ -1,0 +1,42 @@
+
+
+html { 
+  background: url(../images/vectorBackground.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, section {
+	text-align: center;
+}
+img {
+	width:200px; 
+    height: auto;
+}
+
+#total {
+	background-color: #ffe6e6;
+	text-align: center;
+}
+
+#color2 {
+	background-color: #eeccff;
+	text-align: center;
+}
+
+#color2 {
+	background-color: #eeccff;
+	text-align: center;
+}
+
+#color2 {
+	background-color: #eeccff;
+	text-align: center;
+}
+
+.col-md-6 {
+	height: 200px;
+}
+
