@@ -1,0 +1,58 @@
+<!-- I am going to start by creating the html document -->
+<!-- ! + tab -->
+<!-- Link the style sheet -->
+<!-- Link the javascript -->
+<!-- Grab bootstrap CDN -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>I am a practice document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+   <!--  Jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        Crystal Clicker
+    </div>
+    <!-- Container and container-fluid are two different classes that give different paddings to what they wrap -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">Instructions</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">Wins: <span id="wins"></span></div>
+            <div class="col-sm-3">Losses: <span id="losses"></span></div>
+            <div class="col-sm-3">User Score: <span id="userScore"></span></div>            
+            <div class="col-sm-3">Random Number: <span id="randomNumber"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <button class="btn btn-default crystal" id="ruby">Ruby</button>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-default crystal" id="sapphire">Sapphire</button>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-default crystal" id="emerald">Emerald</button>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-default crystal" id="diamond">Diamond</button>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Custom JS -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</html>
