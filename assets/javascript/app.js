@@ -9,43 +9,25 @@ var incorrect = document.getElementById("incorrect");
 console.log(incorrect);
 
 var timeRemaining = document.getElementById("timeRemaining");
-console.log(timeRemaining);
+
 
 // THIS IS JUST A VARIABLE
 var scoreCounter = 0;
 
 //Questions array
-	var q1 = {"question" : "This country is one of the largest wine-producing countries of the world, where wine is grown in every region of the country. Which country is this?",
-        "a" : "France",
-        "b" : "Italy",
-        "c" : "Germany",
-        "d" : "Australia",
-        "corrrect" : "b"
-    },
-     q2 = {
-        "question" : "What is the name for the type of art portrait that deliberately exaggerates a person?",
-        "a"        : "Environmental",
-        "b"        : "Cartooning",
-        "c"        : "Caricature",
-        "d"        : "Tribal",
-        "corrrect" : "c"
-    },
-     q3 = {
-        "question" : "Who was the first president of the United States?",
-        "a"        : "Abraham Lincoln",
-        "b"        : "Ronald Reagan",
-        "c"        : "George Washington",
-        "d"        : "Barack Obama",
-        "corrrect" : "c"
-    },
-     q4 = {
-        "question" : "Who was the first president of the United States?",
-        "a"        : "Abraham Lincoln",
-        "b"        : "Ronald Reagan",
-        "c"        : "George Washington",
-        "d"        : "Barack Obama",
-        "corrrect" : "c"
-    }
+	var questions=["This country is one of the largest wine-producing countries of the world, where wine is grown in every region of the country. Which country is this?", "What is the name for the type of art portrait that deliberately exaggerates a person?", "Who was the first president of the United States?", "Who was the first president of the United States?"];
+
+var answers1 =["France", "Italy", "Germany", "Australia",];
+//       "corrrect" : "b"
+
+var answers2=["Environmental", "Cartooning", "Caricature", "Tribal"];
+       //"corrrect" : "c"
+
+var answers3=["Abraham Lincoln","Ronald Reagan", "George Washington","Barack Obama is an idiot"];
+//      "corrrect" : "c"
+
+var answers4=["Abraham Lincoln","Ronald Reagan","George Washington","Barack Obama"];
+
 
 // $.getJSON('js/questions1.json').done(function(data){
 //         window.questionnaire = data;
@@ -54,38 +36,42 @@ var scoreCounter = 0;
 //     });
 
 // DECLARING MAIN CODE
-var startGame = function() {
+function startGame() {
     correct.innerHTML = 0;
     incorrect.innerHTML = 0;
-    randomQuestion.innerHTML = randomQuestion;
-    console.log(randomQuestion);
+    unanswered.innerHTML =0;
+    randomQuestion();
 }
+
+    //.innerHTML = randomQuestion;
+    
 
 startGame();
+answers();
+
+// var selectFruit = ["Apple", "Orange", "Banana", "Cherry"];
+// var pickAFruit = function () {
+// var todaysFruit = selectFruit[Math.floor(Math.random() * 4)];
+// return todaysFruit;
+// };
 
 function randomQuestion(){
-        var obj_keys = Object.keys(window.questionnaire);
-        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-        window.selectedquestion = window.questionnaire[ran_key];
-        document.getElementById("randomQuestion");
+        document.getElementById("randomQuestion").innerHTML = questions[0];
 }
+
+function answers(){
+  for (i = 0; i < 4; i++) {
+    text += answers1[i];
+document.getElementById("answers", "answers", "answers", "answers").innerHTML = text;
+  }
+}
+
+
 //start timer
 var count=30;
 
 var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
-function timer()
-{
-  count=count-1;
-  if (count <= 0)
-  {
-     clearInterval(counter);
-     //counter ended, do something here
-     return;
-  }
-
-  //Do code for showing the number of seconds here
-}
 
 function timer()
 {
@@ -106,24 +92,6 @@ function timer()
 
 
 //
-
-// Grabbing buttons
-var ruby = document.getElementById("ruby");
-console.log(ruby);
-
-var sapphire = document.getElementById("sapphire");
-console.log(sapphire);
-
-var emerald = document.getElementById("emerald");
-console.log(emerald);
-
-var diamond = document.getElementById("diamond");
-console.log(diamond);
-
-// DECLARING GLOBAL FUNCTIONS
-function getRandomValue(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
-}
 
 // function comparativeFunction(){
 // 	if (scoreCounter === parseInt(randomQuestion) { 
