@@ -1,39 +1,132 @@
 console.log("connected");
 
-//start score at 0
-var score = 0;
-var startNumber = 0;
-var crystal1 = Math.floor(Math.random() * (12 - 1) + 1);
-var crystal2 = Math.floor(Math.random() * (12 - 1) + 1);
-var crystal3 = Math.floor(Math.random() * (12 - 1) + 1);
-var crystal4 = Math.floor(Math.random() * (12 - 1) + 1);
-var targetNumber= Math.floor(Math.random() * (120 - 19) + 19);
-var win;
-var lose;
+// DECLARING GLOBAL VARIABLES
+// Grabbing displays
+var correct = document.getElementById("correct");
+console.log(correct);
 
-console.log(targetNumber, crystal1,crystal2,crystal3,crystal4 );
+var incorrect = document.getElementById("incorrect");
+console.log(incorrect);
+
+var timeRemaining = document.getElementById("timeRemaining");
+console.log(timeRemaining);
+
+// THIS IS JUST A VARIABLE
+var scoreCounter = 0;
+
+//Questions array
+	var q1 = {"question" : "This country is one of the largest wine-producing countries of the world, where wine is grown in every region of the country. Which country is this?",
+        "a" : "France",
+        "b" : "Italy",
+        "c" : "Germany",
+        "d" : "Australia",
+        "corrrect" : "b"
+    },
+     q2 = {
+        "question" : "What is the name for the type of art portrait that deliberately exaggerates a person?",
+        "a"        : "Environmental",
+        "b"        : "Cartooning",
+        "c"        : "Caricature",
+        "d"        : "Tribal",
+        "corrrect" : "c"
+    },
+     q3 = {
+        "question" : "Who was the first president of the United States?",
+        "a"        : "Abraham Lincoln",
+        "b"        : "Ronald Reagan",
+        "c"        : "George Washington",
+        "d"        : "Barack Obama",
+        "corrrect" : "c"
+    },
+     q4 = {
+        "question" : "Who was the first president of the United States?",
+        "a"        : "Abraham Lincoln",
+        "b"        : "Ronald Reagan",
+        "c"        : "George Washington",
+        "d"        : "Barack Obama",
+        "corrrect" : "c"
+    }
+
+// $.getJSON('js/questions1.json').done(function(data){
+//         window.questionnaire = data;
+//         console.log(window.questionnaire);
+//         startGame();
+//     });
+
+// DECLARING MAIN CODE
+var startGame = function() {
+    correct.innerHTML = 0;
+    incorrect.innerHTML = 0;
+    randomQuestion.innerHTML = randomQuestion;
+    console.log(randomQuestion);
+}
+
+startGame();
+
+function randomQuestion(){
+        var obj_keys = Object.keys(window.questionnaire);
+        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+        window.selectedquestion = window.questionnaire[ran_key];
+        document.getElementById("randomQuestion");
+}
+//start timer
+
+//compare answer
+// determine if Mathif match inxwewmwn SCORE AND GOOD JOB
+// IF WRONG OR TIMEOUT ADD TO INCORRECT AND NICE TRY, TRY AGAIN
+// new game button
 
 
-//function when the user clicks crystal 1 they get the randomly assigned points added to their running total
-//var startNumber = 0;
-$('button').click(function (currentvalue){
-	alert("CLICKED");
-   startNumber = Number(startNumber) + Number($(this).val());
-    $('.total').text("Total: "+startNumber);        
-});
+//
 
-//$('.total').text(startNumber); 
+// Grabbing buttons
+var ruby = document.getElementById("ruby");
+console.log(ruby);
 
-//function to compare running total to randomly generated target number
+var sapphire = document.getElementById("sapphire");
+console.log(sapphire);
 
-// stop game when user makes over target points or makes target points
+var emerald = document.getElementById("emerald");
+console.log(emerald);
+
+var diamond = document.getElementById("diamond");
+console.log(diamond);
+
+// DECLARING GLOBAL FUNCTIONS
+function getRandomValue(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+// function comparativeFunction(){
+// 	if (scoreCounter === parseInt(randomQuestion) { 
+// 		console.log("I won");
+// 		correct.innerHTML++;
+// 		console.log(correct);
+// 		reset();
+// 	}
+// 	else if (scoreCounter > parseInt(randomQuestion) {
+// 		console.log("I lost");
+// 		incorrect.innerHTML++;
+// 		console.log(incorrect);
+// 		reset();
+// 	}
+// }
+
+
+// function reset() {
+//     randomQuestion.innerHTML = (randomQuestion);
+//     userScore.innerHTML = 0;
+//     scoreCounter = 0;
+// }
 
 
 
-//document.getElementById("greencounter").innerHTML = theNewValue;
-//parseInt()
-// = n === ()
-// = n <||>()
-
-
+// // Click event listener
+// $(".crystal").on("click", function(){
+// 	// console.log(this);
+// 	console.log(this.value);
+// 	console.log(parseInt(this.value));
+// 	scoreCounter = scoreCounter + parseInt(this.value);
+// 	comparativeFunction();
+// })
 
